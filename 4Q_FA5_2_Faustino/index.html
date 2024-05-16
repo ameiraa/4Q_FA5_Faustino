@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return enter();" onreset="return remove();">
+    <label for="textfield"></label>
+    <input type="text" id="name">
+
+    <input type="submit" value="Add">
+    <input type="reset" value="Remove">
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        var array=[];
+        function enter(){
+            var name=document.getElementById("name").value;
+            if(array.length>6){
+                array.shift();
+            }
+
+            array.push(name);
+            document.getElementById("output").innerHTML=(array);
+            return false;
+        }
+
+        function remove(){
+            array.pop();
+            document.getElementById("output").innerHTML=(array);
+
+            return false;
+        }
+    </script>
+</body>
+</html>
