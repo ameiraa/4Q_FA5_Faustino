@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        do{
+            var num=prompt("Please input a number", num);
+            var x=parseInt(num);
+            if(isNaN(x)){
+                alert("Error, Please input a number");
+            }
+        }while(isNaN(x));
+
+        var b,c;
+
+        document.write("Number inputted: " + x + "<br><br>");
+
+        if(x%2===0){
+            for(b=x;b>0;b--){
+                for(c=0;c<b;c++){
+                    document.write(b + " ");
+                }
+                document.write("<br>");
+            }
+        } else{
+            for(b=x;b>0;b--){
+                for(c=0;c<x;c++){
+                    document.write(b + " ");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+</html>
